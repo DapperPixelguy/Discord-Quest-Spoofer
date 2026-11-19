@@ -7,10 +7,16 @@ A simple program that automatically grabs the list of games discord can detect, 
 
 ## Usage
 
-1. Download the latest release
-2. Unzip and run the exe
-3. Type in the name of the game (make sure it's spelled correctly, and is the full game title)
-4. Click spoof
+1. Download the zip from the [latest release](https://github.com/<you>/<repo>/releases/latest)
+2. Unzip it and run the exe from inside the folder. Windows may say "Windows protected your PC" because the exe isn't signed. Click **More info → Run anyway**
+3. Type in the game's full name as Discord lists it (capitals don't matter)
+4. Click **Spoof**. A dummy window will open, and Discord should pick up the game within a few seconds
+5. Close the dummy window to stop
+
+> **⚠️ May not work with all games! I recommend checking out r/DiscordQuests for any that do not work with this program**
+
+## Antivirus warning
+Some antivirus programs flag this as suspicious, because it copies exes and runs them, and because PyInstaller exes often get false positives. The full source, including the dummy, is in this repo, so you can check it or build it yourself (below).
 
 ## Building from source
 1. Clone the repo
@@ -21,7 +27,8 @@ cargo build --release
 cd ..
 ```
 4. Install dependancies `pip install -r requirements.txt`
-5. Run `pyinstaller --onefile --name "Discord Quest Spoofer" --add-binary "dummy/target/release/dummy.exe;." main.py`
+5. Run `pyinstaller --noconsole --name "Discord Quest Spoofer" --add-binary "dummy/target/release/dummy.exe;." main.py`
+6. The build will be available in `dist/`
 
 
-> ### ⚠️ May not work with all games! I recommend checking out r/DiscordQuests for any that do not work with this program
+
