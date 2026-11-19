@@ -1,0 +1,6 @@
+dist/
+build/
+.idea/
+Games/
+cache.json
+dummy.exe
