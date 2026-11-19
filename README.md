@@ -31,4 +31,8 @@ cd ..
 6. The build will be available in `dist/`
 
 
+## Todo
+1. Upgrade GUI
+2. Add a way to quickly launch multiple games at the same time for the games/hours played badge
+
 
