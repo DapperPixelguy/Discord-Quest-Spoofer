@@ -1,6 +1,9 @@
 # Discord quest spoofer
 
-A simple program that automatically grabs all the games discord can detect, and automatically creates the required file structure for discords quest detection.
+A simple program that automatically grabs the list of games discord can detect, and automatically creates the required file structure for discords quest detection.
+
+> ## ⚠️ This program puts your account at risk of being quest limited!
+> I recommend using it in moderation, and if you get an "Unusual quest activity" warning from discord, not using the program for a while/at all.
 
 ## Usage
 
@@ -11,12 +14,14 @@ A simple program that automatically grabs all the games discord can detect, and 
 
 ## Building from source
 1. Clone the repo
-2. (Optional) Enter dummy/ and run `cargo build --release` to build the dummy exe
-3. Install dependancies `pip install requests pyinstaller`
+2. **(Optional)** Build the dummy exe yourself  
+```
+cd dummy
+cargo build --release
+cd ..
+```
+4. Install dependancies `pip install -r requirements.txt`
 5. Run `pyinstaller --onefile --name "Discord Quest Spoofer" --add-binary "dummy/target/release/dummy.exe;." main.py`
 
-
-> ## ⚠️ This program puts your account at risk of being quest limited!
-> I recommend using it in moderation, and if you get an "Unusual quest activity" warning from discord, not using the program for a while/at all.
 
 > ### ⚠️ May not work with all games! I recommend checking out r/DiscordQuests for any that do not work with this program
